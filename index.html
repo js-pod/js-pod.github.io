@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jspod — your personal Solid pod, in one command</title>
+<meta name="description" content="An open-source Solid pod that runs in 60 seconds. No accounts, no platforms, your own data. `npx jspod` and you're done.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://jspod.org/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jspod.org/">
+<meta property="og:site_name" content="jspod">
+<meta property="og:title" content="jspod — your personal Solid pod, in one command">
+<meta property="og:description" content="An open-source Solid pod that runs in 60 seconds. No accounts, no platforms, your own data. npx jspod and you're done.">
+<meta property="og:image" content="https://jspod.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="jspod — Your pod. One command. npx jspod.">
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://jspod.org/">
+<meta name="twitter:title" content="jspod — your personal Solid pod, in one command">
+<meta name="twitter:description" content="An open-source Solid pod that runs in 60 seconds. No accounts, no platforms, your own data.">
+<meta name="twitter:image" content="https://jspod.org/og.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topnav">
+  <a class="brand" href="/">
+    <span class="brand-mark">js</span>
+    <span class="brand-name">jspod</span>
+  </a>
+  <nav>
+    <a href="#install">Install</a>
+    <a href="#apps">Apps</a>
+    <a href="#why">Why</a>
+    <a href="https://github.com/JavaScriptSolidServer/jspod" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.npmjs.com/package/jspod" target="_blank" rel="noopener">npm</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <h1>Your pod.<br><span class="accent">One command.</span></h1>
+    <p class="lede">
+      An open-source <a href="https://solidproject.org" target="_blank" rel="noopener">Solid</a> pod that runs in 60 seconds.
+      No accounts. No platforms. Your own data, on your own machine, at an address you own.
+    </p>
+    <div class="cta-row">
+      <a class="cta primary" href="#install">Install in 60 seconds →</a>
+      <a class="cta secondary" href="https://github.com/JavaScriptSolidServer/jspod" target="_blank" rel="noopener">Read the source</a>
+    </div>
+    <p class="hero-foot">
+      Open source · AGPL-3.0 · Built on
+      <a href="https://github.com/JavaScriptSolidServer/JavaScriptSolidServer" target="_blank" rel="noopener">JavaScript Solid Server</a>
+    </p>
+  </section>
+
+  <section id="install" class="install">
+    <h2>60 seconds, start to finish</h2>
+    <p class="section-lede">
+      Anyone with Node 18+ can run a pod with one command. No signup. No cloud.
+      The pod auto-installs a curated set of apps on first run, opens your
+      browser to a working workspace, and is ready for you to log in as
+      <code>me</code> / <code>me</code>.
+    </p>
+
+    <div class="install-card">
+      <pre><code>npx jspod</code></pre>
+      <p>That's it.</p>
+    </div>
+
+    <ol class="install-steps">
+      <li>
+        <p><strong>The pod starts</strong> at <code>http://localhost:5444</code>.</p>
+      </li>
+      <li>
+        <p><strong>Apps auto-install on first run</strong> — Slack-shaped group chat, a blog, shared docs, an agent runtime, more. <a href="#apps">See what's included.</a></p>
+      </li>
+      <li>
+        <p><strong>Your browser opens</strong> to the welcome page. Sign in with the default <code>me</code> / <code>me</code> credentials (localhost-only, change anytime).</p>
+      </li>
+      <li>
+        <p><strong>Open the launcher</strong> at <code>/public/apps/home/</code> and tap any app. They're all real PWAs — add them to your phone's home screen.</p>
+      </li>
+    </ol>
+
+    <p class="install-foot">
+      Don't want the default apps? <code>npx jspod --no-bootstrap</code>.<br>
+      Want a specific bundle? <code>jspod install --bundle teams</code> (or <code>starter</code>, <code>productivity</code>, <code>agentic</code>).
+    </p>
+  </section>
+
+  <section id="apps" class="apps">
+    <h2>Apps included by default</h2>
+    <p class="section-lede">
+      Curated at <a href="https://github.com/solid-apps/bundles/blob/gh-pages/default.jsonld" target="_blank" rel="noopener">solid-apps/bundles/default.jsonld</a>.
+      Updates ship without a new jspod release.
+    </p>
+    <ul class="app-grid">
+      <li>
+        <h3>home</h3>
+        <p>macOS-style dock of every app on your pod. The launcher.</p>
+      </li>
+      <li>
+        <h3>plaza</h3>
+        <p>Group chat — Slack-shaped UI, Solid-native data. Cross-pod by default.</p>
+      </li>
+      <li>
+        <h3>vellum</h3>
+        <p>Markdown editor. Specs, notes, anything text.</p>
+      </li>
+      <li>
+        <h3>plume</h3>
+        <p>Pod-native blog. Each post a JSON-LD resource, comments and Atom feed included.</p>
+      </li>
+      <li>
+        <h3>chat</h3>
+        <p>1:1 direct messages across Solid pods. Nostr-encrypted.</p>
+      </li>
+      <li>
+        <h3>timeline</h3>
+        <p>Decentralized social feed — your wall on your pod.</p>
+      </li>
+      <li>
+        <h3>charlie</h3>
+        <p>Pod-resident chat bot. SKILL.md as brain, MCP as tools, BYO LLM key.</p>
+      </li>
+      <li>
+        <h3>chrome</h3>
+        <p>Window manager and app shelf. Desktop-style launcher.</p>
+      </li>
+      <li>
+        <h3>explorer</h3>
+        <p>File browser with per-row ACL chips. See what's on the pod.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="why" class="why">
+    <h2>Why bother</h2>
+    <div class="why-grid">
+      <div>
+        <h3>You own your data.</h3>
+        <p>
+          Every app writes to your pod. Slack-shaped chat, your blog, your
+          docs, your photos — all sit as files on a directory you control.
+          Stop running an app tomorrow and your data is still there, the
+          shape is portable, another app can read it.
+        </p>
+      </div>
+      <div>
+        <h3>No accounts.</h3>
+        <p>
+          jspod ships you onto a working pod with default credentials in
+          60 seconds. No email, no captcha, no "verify your phone". Climb
+          the auth ladder — passkeys, hardware keys, MFA — when and if
+          you want.
+        </p>
+      </div>
+      <div>
+        <h3>Federation by default.</h3>
+        <p>
+          Pods talk to pods. Alice on her pod and Bob on his are in the
+          same plaza room without a bridge bot or "Slack Connect"
+          equivalent. The protocol is the network effect.
+        </p>
+      </div>
+      <div>
+        <h3>Open all the way down.</h3>
+        <p>
+          AGPL-3.0. Every layer is auditable — the pod (JSS), the CLI
+          (jspod), every app (solid-apps), the bundle metadata. No telemetry,
+          no tracking pixels, no "AI training data" small print.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ecosystem" class="ecosystem">
+    <h2>The stack</h2>
+    <div class="stack">
+      <div>
+        <h3>jspod</h3>
+        <p>The friendly CLI. Spins up a pod, opens your browser, auto-installs the default bundle.</p>
+        <a href="https://github.com/JavaScriptSolidServer/jspod" target="_blank" rel="noopener">github.com/JavaScriptSolidServer/jspod →</a>
+      </div>
+      <div>
+        <h3>JSS</h3>
+        <p>The substrate. A Solid server in pure JavaScript — LDP, WAC, OIDC, WebSocket notifications, git HTTP backend.</p>
+        <a href="https://github.com/JavaScriptSolidServer/JavaScriptSolidServer" target="_blank" rel="noopener">github.com/JavaScriptSolidServer/JavaScriptSolidServer →</a>
+      </div>
+      <div>
+        <h3>solid-apps</h3>
+        <p>The apps. Self-contained, JSON-LD-native, AGPL-licensed.</p>
+        <a href="https://github.com/solid-apps" target="_blank" rel="noopener">github.com/solid-apps →</a>
+      </div>
+      <div>
+        <h3>solid-apps/bundles</h3>
+        <p>Curated app collections. The <code>default</code> bundle is what auto-installs on first run.</p>
+        <a href="https://github.com/solid-apps/bundles" target="_blank" rel="noopener">github.com/solid-apps/bundles →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>jspod · AGPL-3.0 · your data, your pod</span>
+    <span class="footer-sep">·</span>
+    <a href="https://github.com/JavaScriptSolidServer/jspod" target="_blank" rel="noopener">GitHub</a>
+    <span class="footer-sep">·</span>
+    <a href="https://www.npmjs.com/package/jspod" target="_blank" rel="noopener">npm</a>
+    <span class="footer-sep">·</span>
+    <a href="https://solidproject.org" target="_blank" rel="noopener">Solid</a>
+  </div>
+</footer>
+
+</body>
+</html>
