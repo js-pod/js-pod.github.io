@@ -233,7 +233,8 @@ h2 {
 
 .stack {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* 2-col grid above ~720px so the four cards form a tidy 2×2. */
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 .stack > div {
@@ -289,6 +290,7 @@ h2 {
   h2 { font-size: 28px; }
   .why-grid { grid-template-columns: 1fr; gap: 28px; }
   .app-grid { grid-template-columns: 1fr 1fr; }
+  .stack { grid-template-columns: 1fr; }
   .install-card pre { font-size: 18px; }
 }
 @media (max-width: 480px) {
